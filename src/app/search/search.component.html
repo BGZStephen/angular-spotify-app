@@ -1,0 +1,7 @@
+<h1>Need Music?</h1>
+<p class="lead">Use the Angular Spotify App to find new music, check out bands and preview tracks! Get started by searching below</p>
+<form>
+  <div class="form-group">
+    <input type="text" name="searchString" [(ngModel)]="searchString" (keyup)="searchMusic()" class="form-control" placeholder="Search Music...">
+  </div>
+</form>
