@@ -8,14 +8,18 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { SearchComponent } from './search/search.component';
 import { routing } from "./app.routes";
-import { SpotifyService } from "./services/spotify.service"
+import { SpotifyService } from "./services/spotify.service";
+import { ArtistComponent } from './artist/artist.component';
+import { AlbumComponent } from './album/album.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     AboutComponent,
-    SearchComponent
+    SearchComponent,
+    ArtistComponent,
+    AlbumComponent,
   ],
   imports: [
     BrowserModule,

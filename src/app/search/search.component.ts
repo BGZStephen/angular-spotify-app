@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SpotifyService } from "../services/spotify.service";
+import { Artist } from "./artist";
 
 @Component({
   selector: 'app-search',
@@ -9,13 +10,14 @@ import { SpotifyService } from "../services/spotify.service";
 export class SearchComponent {
 
   private searchString: string;
+  private searchResults: Artist[]
 
   constructor(private spotifyService: SpotifyService) { }
 
   searchMusic() {
     this.spotifyService.searchMusic(this.searchString)
       .subscribe(res => {
-        console.log(res.artists.items)
+        this.searchResults = res.artists.items
       })
   }
 
